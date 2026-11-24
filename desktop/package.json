@@ -1,0 +1,46 @@
+{
+  "name": "rxmunshi-desktop",
+  "productName": "RxMunshi",
+  "version": "1.0.0",
+  "description": "RxMunshi for Windows: pharmacy back office with an approval-gated AI munshi. Works offline.",
+  "author": "RxMunshi",
+  "license": "UNLICENSED",
+  "private": true,
+  "main": "main.cjs",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win nsis --x64"
+  },
+  "devDependencies": {
+    "electron": "44.10.2",
+    "electron-builder": "26.18.1"
+  },
+  "build": {
+    "appId": "in.rxmunshi.desktop",
+    "productName": "RxMunshi",
+    "copyright": "RxMunshi",
+    "directories": { "output": "../dist", "buildResources": "build" },
+    "files": ["main.cjs", "web/**/*", "build/icon.png", "package.json"],
+    "asar": true,
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }],
+      "icon": "build/icon.ico",
+      "artifactName": "RxMunshi-Setup-${version}.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": "always",
+      "createStartMenuShortcut": true,
+      "shortcutName": "RxMunshi",
+      "runAfterFinish": true,
+      "installerIcon": "build/icon.ico",
+      "uninstallerIcon": "build/icon.ico",
+      "installerHeaderIcon": "build/icon.ico",
+      "license": "build/license.txt",
+      "deleteAppDataOnUninstall": false
+    }
+  }
+}

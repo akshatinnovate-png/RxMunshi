@@ -1,0 +1,19 @@
+RxMunshi 1.0.0
+
+RxMunshi is back-office software for licensed retail pharmacies. It keeps
+records, prepares work for your approval, and prints documents. It never sells,
+stocks, delivers or lists medicines.
+
+Please read before installing:
+
+1. This Windows app runs in Demo mode. It comes with a synthetic shop (made-up
+   people, phone numbers and licence numbers) and keeps all records on this
+   computer only. Nothing is uploaded.
+2. The compliance score, the H1 register checks and every suggestion are aids
+   for the owner and the registered pharmacist. They are not legal or medical
+   advice. The pharmacist decides every dispensing and substitution.
+3. WhatsApp messages open in WhatsApp for you to send. Message a patient only
+   after they have given consent (DPDP Act 2023).
+4. The software is provided "as is", without warranty of any kind.
+
+By clicking "I Agree" you accept these terms.

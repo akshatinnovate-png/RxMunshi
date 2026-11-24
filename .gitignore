@@ -7,3 +7,9 @@ out
 next-env.d.ts
 e2e/shots
 test-results
+.next-static
+dist
+android/build
+desktop/node_modules
+desktop/web
+*.keystore

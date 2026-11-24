@@ -1,8 +1,20 @@
 'use client';
 // Browser-only helpers: downloads, voice (Web Speech API), speech output, chime.
 
+interface NativeBridge {
+  saveFile(name: string, base64: string, mime: string): void;
+}
+
 export function download(filename: string, content: string | Blob, type = 'text/plain;charset=utf-8') {
   const blob = typeof content === 'string' ? new Blob([content], { type }) : content;
+  // Android app: a WebView cannot save blob downloads, so hand the bytes to the native side
+  const native = (window as unknown as { RxNative?: NativeBridge }).RxNative;
+  if (native) {
+    const r = new FileReader();
+    r.onload = () => native.saveFile(filename, String(r.result).split(',')[1] ?? '', blob.type || type);
+    r.readAsDataURL(blob);
+    return;
+  }
   const url = URL.createObjectURL(blob);
   const a = document.createElement('a');
   a.href = url;

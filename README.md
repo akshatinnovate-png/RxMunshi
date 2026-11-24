@@ -6,6 +6,24 @@ Design: the PoshanSetu + ReachGrid design system (ReachGrid workspace surface).
 
 Plan: [docs/PLAN.md](docs/PLAN.md).
 
+## Download
+
+| App | File |
+|---|---|
+| Windows 10/11 (64-bit) | `RxMunshi-Setup-1.0.0.exe`: setup wizard with Start menu and desktop shortcuts |
+| Android 5.0+ | `RxMunshi-1.0.0.apk` |
+
+Get them from the [v1.0.0 release](https://github.com/akshatinnovate-png/RxMunshi/releases/tag/v1.0.0). Both run offline in Demo mode. Install steps: [docs/releases/v1.0.0.md](docs/releases/v1.0.0.md).
+
+Build them yourself:
+
+```bash
+npm run build:windows   # needs makensis (apt install nsis)
+npm run build:android   # needs a JDK and Ubuntu's android-sdk-platform-23, android-sdk-build-tools, apksigner, zipalign, aapt, dalvik-exchange
+```
+
+The Android signing key is created at `android/release.keystore` on the first build. Keep it safe: updates must be signed with the same key.
+
 ## Run
 
 ```bash
