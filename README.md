@@ -8,6 +8,10 @@ DukaanOS turns a shop's bills, voice notes and WhatsApp into a morning plan, the
 
 Built entirely on Google AI and Google Cloud (Gemini, ADK, Firebase, Cloud Run, BigQuery and more), for the Google Cloud Startup Buildathon India 2026.
 
+## RxMunshi (pharmacy app)
+
+The working app is in [apps/rxmunshi](apps/rxmunshi): see its README. Plan: [docs/RXMUNSHI_PLAN.md](docs/RXMUNSHI_PLAN.md).
+
 ## Status
 
 Planning. Product code is written during the City Buildathon (20-21 November 2026), within the event rules.
